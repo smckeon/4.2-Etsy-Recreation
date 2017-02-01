@@ -14,7 +14,7 @@ fetchJSONP(url, function(data) {
 
       var context = {
           title: album.title,
-          image: album.Images[0].url_75x75,
+          image: album.Images[0].url_170x135,
           shop:  album.Shop.shop_name,
           price: album.price
       };
