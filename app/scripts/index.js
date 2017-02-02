@@ -16,7 +16,7 @@ fetchJSONP(url, function(data) {
           title: album.title,
           image: album.Images[0].url_170x135,
           shop:  album.Shop.shop_name,
-          price: album.price
+          price: '$' + album.price
       };
 
       $('#etsy-album').append(template(context));

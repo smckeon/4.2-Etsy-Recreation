@@ -12,39 +12,164 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
-// img {
-//   max-width: 100%;
-// }
-
 // Begin SCSS
+$robo:'Roboto', sans-serif;
+
+/*
+** HTML/BODY MODIFICATIONS
+*/
+
+.pad-delete{
+  padding: 0;
+}
 
 body{
   background-color: #F5F5F1;
 }
+/*
+** HEADER UPPER/LOWER MODIFICATIONS
+*/
 #etsy-logo{
+  display: inline-block;
+  position: relative;
   font-family: 'Georgia', serif;
   font-size: 36px;
   color: #F56400;
 }
+.header-wrap{
+  background-color: #ffffff;
+}
+
+#etsy-search{
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  margin-bottom: 10px;
+    .search-group{
+    display: -webkit-inline-box;
+  }
+}
+
+.etsy-header-links{
+  position: absolute;
+  display: flex;
+  right: 55px;
+  top: 15px;
+    li{
+      color: #4B97B7;
+      font-size: 14px;
+      margin-right: 10px;
+      list-style-type: none;
+      flex-direction: row;
+      justify-content: center;
+    }
+}
+
+#head-sign-in{
+  border: 1px solid #4B97B7;
+  border-radius: 5px;
+  padding: 5px 2px 5px 2px;
+}
+
+#nav-head-lower{
+  list-style-type: none;
+  display: flex;
+  border-top: 1px solid #E1E3DF;
+  border-bottom: 2px solid #E1E3DF;
+    li {
+      font-family: $robo;
+      font-size: 16px;
+      color: #777780;
+      margin-right: 15px;
+      padding: 10px 0px 10px 0px;
+    }
+}
+
+.category-results{
+  position: absolute;
+  left: 335px;
+    #result{
+      padding-right: 330px;
+    }
+}
+
+.relevancy{
+  color: blue;
+  border: none;
+  color: #F5F5F1;
+  display: inline-block;
+}
+
+/*
+** ASIDE
+*/
+
+.categories{
+  border: 1px solid #E1E3DF;
+  background-color: #FFFFFF;
+  padding: 5px;
+  font-size: 14px;
+  font-family: $robo;
+  width: 230px;
+  margin-right: 0px;
+  ul {
+    padding-left: 25px;
+    li{
+    color: #4B92B7;
+    list-style-type: none;
+    }
+  }
+}
+
+h3{
+  font-family: $robo;
+  font-size: 14px;
+  margin: 0;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+
+
+/*
+** ETSY ALBUM
+*/
 
 .etsy-item{
+position: relative;
 border: 1px solid #CBCCC9;
 padding: 0;
-margin-right: 5px;
+margin-right: 10px;
+margin-bottom: 10px;
+font-family: $robo;
 }
 
 #shop-title{
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 12px;
+  padding-left: 5px;
+  color: #444444;
 }
 
 #shop-price{
   display: inline-block;
+  position: absolute;
+  right: 10px;
+  color: #78C042;
 }
 
 #shop-name{
   display: inline-block;
+  font-size: 12px;
+  padding-left: 5px;
+  color: #A09A9D;
+}
+
+.album-box-edit{
+  padding-top: 22px;
 }
 
 .shop-image{
