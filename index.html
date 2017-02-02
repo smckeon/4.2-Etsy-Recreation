@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4.2 Etsy Recreation</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="wrapper container-fluid pad-delete">
+  <div class="header-wrap">
+    <row>
+      <div class="col-xs-12">
+        <p id="etsy-logo">Etsy</p>
+          <form id="etsy-search">
+            <div class="search-group">
+              <input type="text" class="form-control search-box" placeholder="Search for items or shops">
+              <span class="search-btn">
+              <button class="btn btn-info searchbutton" type="button">Search</button>
+            </span>
+          </div>
+        </form>
+        <ul class="etsy-header-links">
+          <li>Sell On Etsy</li>
+          <li>Register</li>
+          <li id="head-sign-in">Sign In</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </row>
+
+    <ul id="nav-head-lower">
+      <li>Clothing & Accessories</li>
+      <li>Jewelry</li>
+      <li>Craft Supplies & Tools</li>
+      <li>Weddings</li>
+      <li>Entertainment</li>
+      <li>Home & Living</li>
+      <li>Kids & Baby</li>
+      <li>Vintage</li>
+    </ul>
+  </div>
+  <row>
+
+  <div class="category-results">
+    <a href=""><span>All Categories</span></a>
+    <span id="result">“yarn” > (321,406 Results)</span>
+    <span>Sort by: </span>
+    <div class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle dropbtnformat" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Relevancy <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Most Recent</a></li>
+        <li><a href="#">Revelancy</a></li>
+        <li><a href="#">Highest Price</a></li>
+        <li><a href="#">Lowest Price</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="col-xs-3">
+      <aside>
+          <p>Show Results for:</p>
+          <div>
+            <div class="categories">
+              <h3>All Categories</h3>
+              <ul>
+                <li>Craft Supplies & Tools</li>
+                <li>Accessories</li>
+                <li>Home & Living</li>
+                <li>Clothing</li>
+                <li>Jewelry</li>
+                <li>Art & Collectibles</li>
+                <li>Bags & Purses</li>
+                <li>Toys & Games</li>
+                <li>Bath & Beauty</li>
+                <li>Paper & Party Supplies</li>
+                <li>Shoes</li>
+                <li>Pet Supplies</li>
+                <li>Books, Movies & Music</li>
+                <li>Electronics & Accessories</li>
+                <li>Weddings</li>
+              </ul>
+            </div>
+          </div>
+      </aside>
+    </div>
+    <div class="col-xs-9 album-box-edit">
+      <row>
+        <div id="etsy-album"></div>
+      </row>
+    </div>
+  </row>
+
+    <script type="text/x-handlebars-template"     id="etsy-album-template">
+      <div class="col-xs-6 col-md-4 col-lg-3 etsy-item">
+        <img src="{{image}}" alt="" class="shop-image">
+        <p id="shop-title">{{title}}</p>
+        <p id="shop-name">{{shop}}</p>
+        <p id="shop-price">{{price}}</p>
+      </div>
+    </script>
+
+</div>
+
+
+    <script src="js/bundle.js"></script>
+</body>
+
+</html>
