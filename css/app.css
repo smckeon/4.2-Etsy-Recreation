@@ -5870,7 +5870,7 @@ h3 {
   padding-left: 5px; }
 
 /*
-** ETSY ALBUM
+** ETSY PRODUCT LISTING
 */
 .etsy-item {
   position: relative;
@@ -5900,7 +5900,7 @@ h3 {
   padding-left: 5px;
   color: #A09A9D; }
 
-.album-box-edit {
+.listing-box-edit {
   padding-top: 22px; }
 
 .shop-image {
