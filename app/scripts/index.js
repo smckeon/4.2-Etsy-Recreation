@@ -3,23 +3,44 @@ var $ = require ('jquery');
 var _ = require ('underscore');
 
 
-var source = $('#etsy-album-template').html();
+var source = $('#etsy-listing-template').html();
 var template = Handlebars.compile(source);
 
 var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=yarn&includes=Images,Shop";
 
+/*
+  (url: String, callback: Function) -> undefined
+
+  Execute a callback function with the JSON results from the url specified.
+
+  Examples
+      var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=yarn&includes=Images,Shop";
+
+      fetchJSONP(url, function(data) {
+        // do something with data
+      });
+
+      // OR
+
+      function logData(data) {
+        console.log(data);
+      }
+
+      fetchJSONP(url, logData);
+*/
+
 fetchJSONP(url, function(data) {
-  _.each(data.results, function(album){
-    console.log(album);
+  _.each(data.results, function(listing){
+    console.log(listing);
 
       var context = {
-          title: album.title,
-          image: album.Images[0].url_170x135,
-          shop:  album.Shop.shop_name,
-          price: '$' + album.price
+          title: listing.title,
+          image: listing.Images[0].url_170x135,
+          shop:  listing.Shop.shop_name,
+          price: '$' + listing.price
       };
 
-      $('#etsy-album').append(template(context));
+      $('#etsy-listing').append(template(context));
   });
 });
 
