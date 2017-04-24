@@ -24,7 +24,7 @@
             </span>
           </div>
         </form>
-        <ul class="etsy-header-links">
+        <ul class="etsy-header-links hidden-xs">
           <li>Sell On Etsy</li>
           <li>Register</li>
           <li id="head-sign-in">Sign In</li>
@@ -33,7 +33,7 @@
       </div>
     </row>
 
-    <ul id="nav-head-lower">
+    <ul class="nav-head-lower hidden-xs">
       <li>Clothing &amp; Accessories</li>
       <li>Jewelry</li>
       <li>Craft Supplies &amp; Tools</li>
@@ -46,7 +46,7 @@
   </div>
   <row>
 
-  <div class="category-results">
+  <div class="category-results hidden-xs">
     <a href=""><span>All Categories</span></a>
     <span id="result">“yarn” > (321,406 Results)</span>
     <span>Sort by: </span>
@@ -61,7 +61,7 @@
     </div>
   </div>
 
-    <div class="col-xs-3">
+    <div class="col-md-3">
       <aside>
           <p>Show Results for:</p>
           <div>
@@ -88,7 +88,7 @@
           </div>
       </aside>
     </div>
-    <div class="col-xs-9 listing-box-edit">
+    <div class="col-md-9 col-xs-12 col-sm-5 listing-box-edit">
       <row>
         <div id="etsy-listing"></div>
       </row>
@@ -96,7 +96,7 @@
   </row>
 
     <script type="text/x-handlebars-template" id="etsy-listing-template">
-      <div class="col-xs-6 col-md-4 col-lg-3 etsy-item">
+      <div class="col-xs-6 col-md-3 col-sm-12 etsy-item">
         <img src="{{image}}" alt="" class="shop-image">
         <p id="shop-title">{{title}}</p>
         <p id="shop-name">{{shop}}</p>

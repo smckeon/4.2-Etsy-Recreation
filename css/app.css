@@ -5817,16 +5817,18 @@ body {
 #head-sign-in {
   border: 1px solid #4B97B7;
   border-radius: 5px;
-  padding: 5px 2px 5px 2px; }
+  padding: 5px 2px 5px 2px;
+  position: relative;
+  bottom: 5px; }
 
-#nav-head-lower {
+.nav-head-lower {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-top: 1px solid #E1E3DF;
   border-bottom: 2px solid #E1E3DF; }
-  #nav-head-lower li {
+  .nav-head-lower li {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     color: #777780;
@@ -5861,6 +5863,10 @@ body {
     .categories ul li {
       color: #4B92B7;
       list-style-type: none; }
+
+@media screen and (max-width: 600px) {
+  .categories {
+    padding-left: 0px; } }
 
 h3 {
   font-family: "Roboto", sans-serif;
